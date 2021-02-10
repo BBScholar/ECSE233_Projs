@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+
 if [ -d "zips" ]; then
     echo "Deleting old zips"
     rm -rf zips
@@ -13,8 +14,8 @@ echo "Generating zips"
 for dir in */     # list directories in the form "/tmp/dirname/"
 do
     if [ "${dir%*/}" != "zips" ]; then 
-        echo "Generating Project: ${dir%*/}"
-        zip -r zips/${dir%*/}.zip ${dir}*
+        echo "Generating Zip: bbs27_${dir%*/}"
+        zip -r zips/bbs27_${dir%*/}.zip ${dir}*
     fi
 done
 
