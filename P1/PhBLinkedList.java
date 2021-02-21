@@ -9,17 +9,17 @@ public class PhBLinkedList implements PhoneBook {
         mData = new LinkedList<Person>();
     }
     
-    // This method will have O(1) runtime for adding elements at the head or tail of the linked list
-    // and O(n) runtime for inserting an element in the middle of the list
+
+    // This method will have O(1) runtime for adding elements at the 
+    // head and tail of the LinkedList, this is (likely) done internally by java
+    // and O(n) runtime for any element in the "middle"
+    // of the collection
     @Override
     public void insert(final int i, final Person p) {
-        if(i >= size())
-            mData.addLast(p);
-        else if(i < 0)
-            throw new IndexOutOfBoundsException("Negative indicies are bad!");
+        if(i < 0) throw new IndexOutOfBoundsException();
         else {
-            mData.addLast(mData.get(i)); // you could also use addFirst here, doesnt matters
-            mData.set(i, p);
+            final int last_idx = size();
+            mData.add(i > last_idx ? last_idx : i, p);
         }
     }
     
@@ -29,26 +29,12 @@ public class PhBLinkedList implements PhoneBook {
     // so no need to be redundant, just know they are there
     @Override
     public Person remove(final int i) {
-        if(i >= size())
-            return null;
-        else if(i < 0)
-            throw new IndexOutOfBoundsException("Negative indicies are bad");
+        final int last_idx = size();
+        if(i < 0) throw new IndexOutOfBoundsException();
+        else if(i > last_idx) return null;
         else {
-            // this will be inlined (probably, so maybe no stack space?)
-            final int last_idx = size() - 1;
-            
-            // java does this internally, but we will call these manually
-            // to avoid the later copy steps
-            if(i == last_idx) return mData.removeLast();
-            else if(i == 0) return mData.removeFirst();
-            
-            // swap the elements and 
-            final Person temp = mData.get(i);
-            mData.set(i, mData.getFirst()); 
-            mData.removeFirst();
-
-            return temp;
-        }        
+            return mData.remove(i);
+        }
     }
     
     // O(1) runtime for looking up the head or tail,
@@ -60,7 +46,9 @@ public class PhBLinkedList implements PhoneBook {
         return mData.get(i);
     }
     
-    // O(1), calculated for us by the internal datatype.
+    // O(1), calculated for us by the internal datatype
+    // For some reason, if the java LinkedList impl doesnt store the size, this would be O(n),
+    // but I doubt it.
     @Override
     public int size() {
         return mData.size();

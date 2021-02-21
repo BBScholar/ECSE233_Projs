@@ -80,6 +80,7 @@ public class Demo {
     
         // for the arraylist implementation, we can minimize runtime by adding all elements to
         // the back of the list, since adding elements to the back has a runtime of O(1) instead of O(n) for inserting in the middle
+        // NOTE: I added an optimization that allows for O(1) insertions to any point in the ArrayList. You can insert anywhere with O(1) now
         array.insert(0, new Person("James", "3451515151555", 420));
         array.insert(1, new Person("Valterri", "34343434", 77));
         array.insert(2, new Person("Lewis", "5843758943", 44));

@@ -10,7 +10,7 @@ public class PhBArrayList implements PhoneBook {
 
     public PhBArrayList() {
         // constuct the array list
-        mData =  new ArrayList<Person>();
+        mData = new ArrayList<Person>();
     }
 
     // this method will be O(1) for all inputs, since we do not care about the order of the elements, we simply copy the 
@@ -27,7 +27,10 @@ public class PhBArrayList implements PhoneBook {
             // we cant use negative indicies
             throw new IndexOutOfBoundsException("Negative indicies are bad!");
         } else {
+            // send element at i to the end
             mData.add(mData.get(i));
+
+            // set element at i to new value
             mData.set(i, p);
         }
     }
@@ -59,6 +62,7 @@ public class PhBArrayList implements PhoneBook {
     }
     
     // This method will be constant time, O(1), since we are not searching, we are just getting whatever person is at index i
+    // Array lists allow random access, thus allowing an O(1) access of any element
     @Override
     public Person lookup(final int i) {
         // we can only lookup people that exist
@@ -68,7 +72,7 @@ public class PhBArrayList implements PhoneBook {
     }
 
     // size of the phonebook.
-    // O(1), unless the java implementation is dumb
+    // O(1), this should be self explanatory. Stored as variable in ArrayList, so constant time
     @Override
     public int size() {
         return mData.size();
