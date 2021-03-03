@@ -36,10 +36,11 @@ public class A2P1 {
 
             reader.close();
         } catch (final FileNotFoundException e) {
-            e.printStackTrace();
+            // throw exception if file not found
+            System.out.println("File not found: " + path);
             System.exit(-1);
         } catch (final java.util.NoSuchElementException e) {
-            /* e.printStackTrace(); */
+            // throw exception if not enough elements in the file
             System.out.println("Not enough elements in file");
             System.exit(-2);
         }
