@@ -26,7 +26,7 @@ final class UniqueKeyBST<K, V> extends BST<K, V> {
                 child = toDelete.get().left;
 
             if (toDelete == mRoot)
-                mRoot = Optional.empty();
+                mRoot = child;
             else if (leftOfParent)
                 parent.get().left = child;
             else
@@ -35,24 +35,26 @@ final class UniqueKeyBST<K, V> extends BST<K, V> {
             Optional<Node<K, V>> replacement, replacementParent;
             boolean left;
 
-            replacementParent = Optional.empty();
+            replacementParent = toDelete;
 
             // randomize which subtree we pull from, this keeps the
             // tree a bit more symetrical, thus increasing efficiency
             if (Math.random() > 0.5) { // find minimum value in right subtree
                 replacement = toDelete.get().right;
+                left = false;
                 while (replacement.get().left.isPresent()) {
                     replacementParent = replacement;
                     replacement = replacement.get().left;
+                    left = true;
                 }
-                left = true;
             } else { // find maximum value in left subtree
                 replacement = toDelete.get().left;
+                left = true;
                 while (replacement.get().right.isPresent()) {
                     replacementParent = replacement;
                     replacement = replacement.get().right;
+                    left = false;
                 }
-                left = false;
             }
 
             // copy the new kv pair into the toDelete node

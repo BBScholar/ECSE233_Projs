@@ -25,7 +25,7 @@ final class DuplicateKeyBST<K, V> extends BST<K, V> {
                 child = toDelete.get().left;
 
             if (toDelete == mRoot)
-                mRoot = Optional.empty();
+                mRoot = child;
             else if (leftOfParent)
                 parent.get().left = child;
             else
@@ -33,13 +33,16 @@ final class DuplicateKeyBST<K, V> extends BST<K, V> {
         } else { // node has 2 children
             Optional<Node<K, V>> replacement, replacementParent;
 
-            replacementParent = Optional.empty();
+            replacementParent = toDelete;
+
+            boolean left = false;
 
             // find minumum value in right subtree
             replacement = toDelete.get().right;
             while (replacement.get().left.isPresent()) {
                 replacementParent = replacement;
                 replacement = replacement.get().left;
+                left = true;
             }
 
             toDelete.get().key = replacement.get().key;
@@ -48,7 +51,7 @@ final class DuplicateKeyBST<K, V> extends BST<K, V> {
             // recurse to delete the replacement node
             // Time complexity of this loop is O(1) because
             // it will never recurse more than one
-            deleteNode(replacementParent, parent, true);
+            deleteNode(replacementParent, replacement, left);
         }
     }
 
