@@ -58,13 +58,17 @@ class Main {
         return table.isEmpty();
     }
 
-    public static void main(String... args) {
-        /* String s1 = "cdeezs"; */
-        /* String s2 = "eezd"; */
-        String s1 = "deezs 12345";
-        String s2 = "eezds 54321";
+    public static void main(final String... args) {
+        if(args.length < 2)
+            return;
 
-        System.out.println(anagrams(s1, s2));
+        final String s1 = args[0];
+        final String s2 = args[1];
+
+        final boolean res = anagrams(s1, s2);
+
+        System.out.println("Result: " + res);
+        System.out.println("'" + s1 + "' and '" + s2 + "' are " + (res ? "" : "not ") + "anagrams");
     }
 
 
