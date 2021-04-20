@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ec6a074-af8d-48aa-8a41-f5d5dd593d76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HashTable$Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/HashTable$Entry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/HashTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/HashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P4.iws" beforeDir="false" afterPath="$PROJECT_DIR$/P4.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/HashTable$Entry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/HashTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/P4.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/P4.ipr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/P4.iws" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p1a.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p1a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p1b1.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p1b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p1b2.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p1b2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_0.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_1.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_2.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_3.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P4/graphs/p3_3.png" beforeDir="false" />
-    </list>
+    <list default="true" id="9ec6a074-af8d-48aa-8a41-f5d5dd593d76" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +19,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../P5" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
