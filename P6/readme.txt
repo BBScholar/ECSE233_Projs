@@ -1,0 +1,1 @@
+to run benchmark run `java -ea Bench`
